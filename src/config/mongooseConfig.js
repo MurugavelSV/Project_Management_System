@@ -5,6 +5,6 @@ export default function connectDb(){
         .then(() => {
             console.log("Connected to MongoDB successfully");
         }).catch((err) => {
-            console.log("Error in connecting to db");
+            console.log(err.message);
         })
 }
