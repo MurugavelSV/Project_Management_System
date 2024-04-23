@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 export default function connectDb(){
-    mongoose.connect("mongodb://localhost:27017/projectdb")
+    mongoose.connect(process.env.MongoDB_URL)
         .then(() => {
             console.log("Connected to MongoDB successfully");
         }).catch((err) => {

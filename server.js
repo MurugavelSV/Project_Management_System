@@ -3,6 +3,7 @@ import connectDb from "./src/config/mongooseConfig.js";
 import userRouter from "./src/users/userRoute.js";
 import projectRouter from "./src/projects/projectRoute.js";
 import jwtAuth from "./src/middlewares/jwtAuthMiddleware.js";
+import 'dotenv/config';
 
 const app = express();
 

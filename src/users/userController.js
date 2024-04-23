@@ -78,7 +78,7 @@ export default class UserController{
                             id: user._id,
                             email: user.email,
                             userType: user.userType
-                        }, "df677DE4CW", {
+                        }, process.env.JWT_Token, {
                             expiresIn: "1h"
                         });
                         return res.status(200).send(token);

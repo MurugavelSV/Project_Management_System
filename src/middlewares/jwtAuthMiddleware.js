@@ -6,7 +6,7 @@ export default function jwtAuth(req, res, next){
         return res.status(401).send("Unauthorized");
     }
     try{
-        const payload = jwt.verify(token, "df677DE4CW");
+        const payload = jwt.verify(token, process.env.JWT_Token);
         req.userId = payload.id;
         req.userType = payload.userType;
         next();
